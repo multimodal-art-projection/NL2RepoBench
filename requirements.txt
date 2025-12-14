@@ -1,4 +1,4 @@
 socketio
 python_on_whales
 openhands
-Pydantic
+pydantic
