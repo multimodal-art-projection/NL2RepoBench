@@ -781,11 +781,12 @@ def execute_command_in_container(host_info: DockerHostInfo, container_id: str, c
     try:
         client = create_docker_client(host_info)
 
-        # Ensure command format
+        # String commands in test_commands.json are shell programs, not argv
+        # strings. Preserve operators such as &&, >, >>, &, and leading
+        # environment assignments by invoking an explicit shell. Callers that
+        # already have an argv vector can continue to pass a list directly.
         if isinstance(command, str):
-            # Use shlex.split to handle complex command strings with quotes and escapes
-            import shlex
-            command_list = shlex.split(command)
+            command_list = ["/bin/sh", "-lc", command]
         else:
             command_list = command
 
