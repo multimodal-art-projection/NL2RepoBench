@@ -161,6 +161,29 @@ from cerberus.errors import ValidationError
 Validator = InspectedValidator('Validator', (BareValidator,), {})
 ```
 
+**Validation and Callable Interface**:
+
+```python
+def validate(self, document, schema=None, update=False, normalize=True):
+    ...
+
+def __call__(self, document, schema=None, update=False, normalize=True):
+    ...
+```
+
+Calling a validator instance must have the same behavior as calling its `validate`
+method. In particular, `validator(document, schema, update)` must accept `update`
+as the third positional argument; it must not be keyword-only.
+
+- `document`: The mapping to validate.
+- `schema`: The validation schema, or `None` to use the schema already configured
+  on the validator.
+- `update`: Defaults to `False`. When `True`, skip checks for missing required
+  fields, while still validating the fields that are supplied.
+- `normalize`: Defaults to `True`; normalize the document before validation.
+- Return `True` when validation succeeds and `False` for validation-rule failures,
+  exposing the validation errors through the existing error-handling API.
+
 #### 3. _SchemaRuleTypeError Class
 
 **Function**: Raises an exception if the schema is not a dictionary.
