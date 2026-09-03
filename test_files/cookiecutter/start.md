@@ -583,6 +583,15 @@ def load(
 
 **Return Value**: Dictionary of loaded context configurations.
 
+**Compatibility Requirements**: For a successful load, call
+`get_file_name(replay_dir, template_name)` exactly once to obtain the replay file
+path, forwarding both arguments unchanged. In particular, do not convert a
+string `replay_dir` to a `Path` before passing it to `get_file_name`; both APIs
+accept either representation, but the argument passed between them must retain
+the caller's representation. Read the opened replay file with one `json.load`
+call and return the loaded context. This internal call behavior is part of the
+upstream compatibility expected by this task, in addition to the returned data.
+
 #### 17. get_file_name() - Get Replay File Name
 
 **Function**: Get the name of file.

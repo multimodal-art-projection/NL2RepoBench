@@ -2710,6 +2710,30 @@ def open_if_exists(filename: str, mode: str = "rb") -> t.IO[t.Any] | None:
         return None
     return open(filename, mode)
 ```
+#### 95a. consume
+
+**Function**: Iterate through all remaining items of an iterable, discarding the
+items. Return `None`. If an iterator is passed, that same iterator must be
+exhausted when the function returns.
+
+**Import**:
+```python
+from jinja2.utils import consume
+```
+
+**Function Signature**:
+```python
+def consume(iterable: t.Iterable[t.Any]) -> None:
+    ...
+```
+
+**Example**:
+```python
+values = iter(("first", "second"))
+consume(values)
+assert list(values) == []
+```
+
 #### 96. object_type_repr
 **Function**     Returns the name of the object's type.  For some recognized singletons the name of the object is returned instead. (For example for `None` and `Ellipsis`).
 **Parameter**     obj: The object to get the type name for.
