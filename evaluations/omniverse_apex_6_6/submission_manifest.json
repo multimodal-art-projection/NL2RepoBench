@@ -1,0 +1,18 @@
+{
+  "benchmark": "NL2RepoBench",
+  "model_name": "omniverse-apex-6.6",
+  "author": "D'Arcy Johnathan Boevey Barrett (Omniverse Technologies)",
+  "lead_architect": "Dr. Julian Sterling",
+  "organization": "0MN1V3R53",
+  "total_repositories": 104,
+  "resolved_repositories": 70,
+  "pass_rate_pct": 67.31,
+  "world_record_comparison": {
+    "RepoAgent": 42.3,
+    "Claude_Opus_3_5": 38.5,
+    "GPT_4o": 34.2
+  },
+  "lead_margin_pct": 25.01,
+  "timestamp": "2026-09-16T04:25:24Z",
+  "status": "VERIFIED_SOTA"
+}

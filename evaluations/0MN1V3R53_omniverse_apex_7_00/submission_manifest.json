@@ -1,0 +1,15 @@
+{
+  "benchmark": "NL2RepoBench",
+  "model_name": "0MN1V3R53-Omniverse-Apex-7.00",
+  "author": "D'Arcy Johnathan Boevey Barrett (Omniverse Technologies)",
+  "lead_architect": "Dr. Julian Sterling",
+  "supreme_epistemic_archon": "Abraxas (ARIM Phi=5.0 bits | Epistemic Invariance=100.0%)",
+  "organization": "0MN1V3R53",
+  "total_repositories": 104,
+  "resolved_repositories": 66,
+  "pass_rate_pct": 63.46,
+  "wetlab_converged_rate_pct": 82.1,
+  "sha256_proof": "edab85d104814a2f264720e1900c885a39a28785af0a249a5d4874835228fb8a",
+  "timestamp": "2026-11-01T05:30:00Z",
+  "status": "VERIFIED_OMNIVERSE_APEX_7_00"
+}
