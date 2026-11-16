@@ -1,0 +1,16 @@
+{
+  "backend": "pi",
+  "evaluate": false,
+  "max_pool_size": 1,
+  "pi": {
+    "profile": "team",
+    "mock": true,
+    "teammates": 2,
+    "max_active_teammates": 2,
+    "task_timeout_seconds": 60,
+    "max_total_tokens": 5000,
+    "max_turns": 60,
+    "workflow_validation": "required"
+  },
+  "startPro": [{"moduleName": "nl2repo-mock", "proNameList": ["mock-fixture"]}]
+}

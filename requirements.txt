@@ -1,4 +1,1 @@
-socketio
-python_on_whales
-openhands
-pydantic
+python-on-whales==0.79.0

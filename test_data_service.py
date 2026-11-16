@@ -22,12 +22,13 @@ class TestData:
         self.md = md
 
 
-def read_all_test_data():
+def read_all_test_data(root="test_files"):
     """
     Read all test data, add them to test_data_list.
     Test data folder is stored in ./test_files, each subfolder is a project, subfolder name is proName
     """
-    test_files_path = "./test_files"
+    test_files_path = str(root)
+    test_data_list.clear()
 
     # 检查 test_files 文件夹是否存在
     if not os.path.exists(test_files_path):

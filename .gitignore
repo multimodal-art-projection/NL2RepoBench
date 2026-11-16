@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.venv/
+logs/
+workspaces/*
+!workspaces/.gitkeep
+result/
+node_modules/
+pi_agent/runtime/dist/
+config.pi.local.json
+*.env
+.coverage
+
+
+config.pi.*.local.json

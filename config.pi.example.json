@@ -1,0 +1,28 @@
+{
+  "backend": "pi",
+  "evaluate": false,
+  "max_pool_size": 1,
+  "pi": {
+    "profile": "team",
+    "mock": false,
+    "teammates": 2,
+    "max_active_teammates": 2,
+    "task_timeout_seconds": 900,
+    "max_total_tokens": 50000,
+    "max_turns": 60,
+    "workflow_validation": "report",
+    "extensions": [],
+    "extension_options": {},
+    "startup_commands": []
+  },
+  "startPro": [{
+    "moduleName": "YOUR_EXACT_MODEL_ID",
+    "protocol": "openai-completions",
+    "baseUrl": "",
+    "apiKeyEnv": "NL2REPO_API_KEY",
+    "contextWindow": 131072,
+    "maxTokens": 4096,
+    "reasoning": false,
+    "proNameList": ["jsonlines"]
+  }]
+}
